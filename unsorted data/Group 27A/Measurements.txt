@@ -1,0 +1,12 @@
+Dimensions
+
+Aluminium unstretched - diameter=6.00mm length=43.36mm
+Aluminium failed - 4.72 mm diameter 
+Steel unstretched - diameter=6.10mm length=43.12mm
+Steel failed - 4.20 mm diameter
+PLA unstretched - dimamter = 5.92 mm length = 43.46 mm
+PLA failed - diameter=5.88mm
+Timber Perpendicular - arealength1 = 17.86mm, arealength2 = 18.04mm, length=18.04mm
+Timber Parallel - arealength1=17.80mm , arealength2=18.12mm , length=17.94mm
+
+Edward Harvey, Matt Hill, Sam Fiedler, Fergus Mardon

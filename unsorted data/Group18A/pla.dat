@@ -1,0 +1,31 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 27.02.2023	Time: 15:28:08
+
+Name:	18_b_PLA
+User Comment:	Nairn, Koby and Weronika
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0665	0.1001	Inf	Inf
+0.1664	0.1948	Inf	Inf
+0.2464	0.2951	Inf	Inf
+0.3466	0.3834	Inf	Inf
+0.4405	0.4831	Inf	Inf
+0.5266	0.5831	Inf	Inf
+0.6266	0.6676	Inf	Inf
+0.7065	0.7676	Inf	Inf
+0.8065	0.8048	Inf	Inf
+0.9070	0.7863	Inf	Inf
+0.9958	0.6579	Inf	Inf
+1.0101	0.4965	Inf	Inf
+1.0255	0.3577	Inf	Inf
+1.0904	0.0393	Inf	Inf
+Data End	
+

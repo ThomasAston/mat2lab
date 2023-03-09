@@ -1,0 +1,32 @@
+Measurements (mm):
+
+Steel:
+L0: 43.68
+LF: 54.72
+D0: 5.9
+DF: 3.9
+
+Aluminium:
+L0: 43.74
+LF: 49.62
+D0: 6.0
+DF: 4.44
+
+PLA:
+L0:44.1
+LF: 43.64
+D0: 5.9
+DF: 5.9
+
+Wood (parallel):
+L0: 18.30
+LF: 6.68
+D0: 17.24
+DF: 22.5
+
+
+wood (perpendicular):
+L0: 17.50
+LF: 9.20
+D0: 18.14
+DF: 22.40

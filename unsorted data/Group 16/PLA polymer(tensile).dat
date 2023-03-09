@@ -1,0 +1,45 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 17.02.2023	Time: 15:01:36
+
+Name:	Group 16(PLA Polymer)
+User Comment:	Zheren Zheng, Nicolas Georgiou, Charlie McCready
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0405	0.1000	Inf	Inf
+0.1404	0.1446	Inf	Inf
+0.2404	0.1577	Inf	Inf
+0.3412	0.1810	Inf	Inf
+0.4412	0.1888	Inf	Inf
+0.5412	0.1926	Inf	Inf
+0.6412	0.1858	Inf	Inf
+0.7412	0.1971	Inf	Inf
+0.8412	0.1967	Inf	Inf
+0.9412	0.1963	Inf	Inf
+1.0412	0.2162	Inf	Inf
+1.1412	0.2878	Inf	Inf
+1.2320	0.3878	Inf	Inf
+1.3312	0.4878	Inf	Inf
+1.4205	0.5883	Inf	Inf
+1.5205	0.6816	Inf	Inf
+1.6205	0.7749	Inf	Inf
+1.7205	0.8648	Inf	Inf
+1.8205	0.9236	Inf	Inf
+1.9205	0.9382	Inf	Inf
+2.0205	0.9116	Inf	Inf
+2.1205	0.8921	Inf	Inf
+2.2205	0.8993	Inf	Inf
+2.2693	0.7760	Inf	Inf
+2.2922	0.6201	Inf	Inf
+2.3739	0.1686	Inf	Inf
+2.4739	0.1622	Inf	Inf
+2.5747	0.1840	Inf	Inf
+Data End	
+

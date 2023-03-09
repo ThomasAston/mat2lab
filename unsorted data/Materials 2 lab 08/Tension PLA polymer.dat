@@ -1,0 +1,31 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 10.02.2023	Time: 14:57:24
+
+Name:	tension PLA polymer
+User Comment:	IM,PHS,SM
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress				
+mm	KN	%	N/mm^2				
+0.6007	0.1366	Inf	Inf	0.0000	0.0000	0.0000
+0.7003	0.2144	Inf	Inf	0.0000	0.0000	0.0000
+0.8002	0.3033	Inf	Inf	0.0000	0.0000	0.0000
+0.9001	0.3913	Inf	Inf	0.0000	0.0000	0.0000
+1.0004	0.4775	Inf	Inf	0.0000	0.0000	0.0000
+1.1006	0.5704	Inf	Inf	0.0000	0.0000	0.0000
+1.2006	0.6705	Inf	Inf	0.0000	0.0000	0.0000
+1.3009	0.7411	Inf	Inf	0.0000	0.0000	0.0000
+1.4002	0.8060	Inf	Inf	0.0000	0.0000	0.0000
+1.5014	0.7756	Inf	Inf	0.0000	0.0000	0.0000
+1.5313	0.6565	Inf	Inf	0.0000	0.0000	0.0000
+1.6074	0.2116	Inf	Inf	0.0000	0.0000	0.0000
+1.6391	0.0826	Inf	Inf	0.0000	0.0000	0.0000
+1.7393	-0.0016	Inf	-Inf	0.0000	0.0000	0.0000
+Data End	
+

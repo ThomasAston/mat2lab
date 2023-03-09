@@ -1,0 +1,39 @@
+Steel
+Diameter: 5.98mm
+x-sec: 28.09mm^2
+Length: 42.88mm
+Necked diameter: 3.44mm
+
+Aluminium
+Diameter: 6.00mm
+x-sec: 28.27mm^2
+Length: 42.20mm
+Necked diameter: 4.64mm
+
+Polymer
+Diameter: 5.90mm
+x-sec: 27.34mm^2
+Length: 43.54mm
+Necked diamater: 5.90mm
+
+Wood (parallel)
+X: 17.10mm
+Y: 17.62mm
+Z: 17.70mm (Length being compressed)
+
+Post-Compression
+X: 20.10mm
+Y: 24.66mm
+Z: 5.76mm
+
+Wood (perpendicular)
+X: 17.78mm
+Y: 18.16mm
+Z: 18.00mm (Length being compressed)
+
+Post-Compression
+X: 21.68mm
+Y: 18.46mm
+Z: 8.40mm
+
+written and directed by: Lorcan Portway, Jeffrey Jin, Sebastian Klein

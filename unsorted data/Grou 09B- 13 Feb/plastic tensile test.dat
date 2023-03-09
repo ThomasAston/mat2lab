@@ -1,0 +1,35 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 13.02.2023	Time: 13:40:12
+
+Name:	group 9 red bolt tensile test
+User Comment:	
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0262	0.1012	Inf	Inf
+0.0761	0.2006	Inf	Inf
+0.1448	0.3001	Inf	Inf
+0.2190	0.4001	Inf	Inf
+0.3033	0.4998	Inf	Inf
+0.3894	0.6008	Inf	Inf
+0.4885	0.6996	Inf	Inf
+0.5747	0.7999	Inf	Inf
+0.6747	0.8876	Inf	Inf
+0.7740	0.9635	Inf	Inf
+0.8249	0.8616	Inf	Inf
+0.9261	0.9336	Inf	Inf
+1.0276	0.9683	Inf	Inf
+1.1280	0.9588	Inf	Inf
+1.2291	0.9610	Inf	Inf
+1.2583	0.8387	Inf	Inf
+1.3380	0.2511	Inf	Inf
+1.3696	0.0862	Inf	Inf
+Data End	
+

@@ -1,0 +1,32 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 03.03.2023	Time: 13:49:58
+
+Name:	Tensile Test 24A  Red one
+User Comment:	Nikola Kolev ; Nefeli Pelekanou; Roberto Fregonara ; Taylor Cullen
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0591	0.0996	Inf	Inf
+0.1482	0.1999	Inf	Inf
+0.2428	0.3001	Inf	Inf
+0.3198	0.3988	Inf	Inf
+0.4034	0.4990	Inf	Inf
+0.4960	0.5986	Inf	Inf
+0.5962	0.6947	Inf	Inf
+0.6974	0.7454	Inf	Inf
+0.7993	0.7856	Inf	Inf
+0.9002	0.7841	Inf	Inf
+0.9737	0.6616	Inf	Inf
+1.0129	0.4856	Inf	Inf
+1.0901	0.1686	Inf	Inf
+1.1253	0.0258	Inf	Inf
+1.1979	-0.1434	Inf	-Inf
+Data End	
+

@@ -1,0 +1,9 @@
+
+
+						Before						after
+					L	X	W				L	X	W
+PLA					44.26		6.0				43.98		5.76			
+Aluminium				42.00		6.0				47.00		4.00
+Steel					43.50		6.0				44.8		3.60
+Wood parallel grain 			18.12		18.0				9.68		18.90
+Wood perpendicular grain		17.60		18.0				9.42		18.40

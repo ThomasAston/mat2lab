@@ -1,0 +1,95 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 02.03.2023	Time: 14:53:18
+
+Name:	Aluminium 21a
+User Comment:	Will, Isaac, Jose, Ella
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0073	0.1014	Inf	Inf
+0.0335	0.2781	Inf	Inf
+0.0664	0.4599	Inf	Inf
+0.0690	0.5618	Inf	Inf
+0.0751	0.6657	Inf	Inf
+0.1579	1.5865	Inf	Inf
+0.1625	1.7311	Inf	Inf
+0.1719	1.8258	Inf	Inf
+0.2633	3.4404	Inf	Inf
+0.2785	3.5397	Inf	Inf
+0.2809	3.6399	Inf	Inf
+0.3505	3.9342	Inf	Inf
+0.3885	4.0339	Inf	Inf
+0.4516	4.1646	Inf	Inf
+0.4787	4.2649	Inf	Inf
+0.5208	4.3666	Inf	Inf
+0.5642	4.4651	Inf	Inf
+0.6220	4.5857	Inf	Inf
+0.6830	4.6857	Inf	Inf
+0.7366	4.7844	Inf	Inf
+0.7857	4.8839	Inf	Inf
+0.8200	4.9844	Inf	Inf
+0.8814	5.0842	Inf	Inf
+0.9653	5.1839	Inf	Inf
+1.0408	5.2839	Inf	Inf
+1.1148	5.3836	Inf	Inf
+1.2151	5.4715	Inf	Inf
+1.3157	5.5483	Inf	Inf
+1.3976	5.6478	Inf	Inf
+1.4978	5.6875	Inf	Inf
+1.5984	5.7729	Inf	Inf
+1.6982	5.8166	Inf	Inf
+1.7978	5.8561	Inf	Inf
+1.8962	5.9383	Inf	Inf
+1.9971	5.9424	Inf	Inf
+2.0979	5.9754	Inf	Inf
+2.1982	6.0520	Inf	Inf
+2.2993	6.0263	Inf	Inf
+2.4004	6.0488	Inf	Inf
+2.5007	6.0265	Inf	Inf
+2.6011	6.1054	Inf	Inf
+2.7001	6.0868	Inf	Inf
+2.8002	6.0861	Inf	Inf
+2.9002	6.1067	Inf	Inf
+2.9998	6.1383	Inf	Inf
+3.0986	6.1460	Inf	Inf
+3.1995	6.1299	Inf	Inf
+3.2998	6.1465	Inf	Inf
+3.3991	6.1484	Inf	Inf
+3.4990	6.1655	Inf	Inf
+3.5995	6.2160	Inf	Inf
+3.6993	6.1668	Inf	Inf
+3.7998	6.1779	Inf	Inf
+3.9000	6.1108	Inf	Inf
+3.9997	6.1383	Inf	Inf
+4.1009	6.1085	Inf	Inf
+4.1998	6.1087	Inf	Inf
+4.3001	6.0263	Inf	Inf
+4.4010	6.0129	Inf	Inf
+4.5012	5.9338	Inf	Inf
+4.6024	5.9141	Inf	Inf
+4.7032	5.8481	Inf	Inf
+4.8030	5.7939	Inf	Inf
+4.9017	5.6924	Inf	Inf
+5.0006	5.6462	Inf	Inf
+5.0767	5.5429	Inf	Inf
+5.1780	5.5064	Inf	Inf
+5.2783	5.4074	Inf	Inf
+5.3792	5.3305	Inf	Inf
+5.4473	5.2264	Inf	Inf
+5.5459	5.1415	Inf	Inf
+5.6226	5.0368	Inf	Inf
+5.6956	4.9352	Inf	Inf
+5.7434	4.7542	Inf	Inf
+5.8488	4.4426	Inf	Inf
+5.9191	4.2859	Inf	Inf
+5.9963	4.1280	Inf	Inf
+6.0754	3.9689	Inf	Inf
+Data End	
+

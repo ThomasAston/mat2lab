@@ -1,0 +1,9 @@
+Steel: length before = 44mm  diameter before = 4mm length after = 53mm diameter after = 3.2mm
+
+Aluminium: length before = 43.38mm diameter before = 5mm length after = 48.1mm diameter after = 
+
+PLA: length before = 43.2mm diameter before = 5.1mm length after = 41.2mm
+
+Timber perpendicular to the grain: length before = 19.2mm length after = 7.1mm
+
+Timber parallel to the grain: length before = 17.5mm length after = 6.3mm

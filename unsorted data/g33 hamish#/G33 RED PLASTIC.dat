@@ -1,0 +1,38 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 10.02.2023	Time: 16:45:31
+
+Name:	G33 RED PLASTIC
+User Comment:	HAMISH
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.2008	0.0827	Inf	Inf
+0.3009	0.1176	Inf	Inf
+0.4010	0.1090	Inf	Inf
+0.5004	0.1140	Inf	Inf
+0.6004	0.1191	Inf	Inf
+0.7008	0.1149	Inf	Inf
+0.8010	0.1184	Inf	Inf
+0.9007	0.1146	Inf	Inf
+1.0008	0.1169	Inf	Inf
+1.1007	0.1382	Inf	Inf
+1.2011	0.1988	Inf	Inf
+1.3010	0.2803	Inf	Inf
+1.4011	0.3660	Inf	Inf
+1.4911	0.4660	Inf	Inf
+1.5912	0.5507	Inf	Inf
+1.6911	0.6413	Inf	Inf
+1.7915	0.7192	Inf	Inf
+1.8836	0.5930	Inf	Inf
+1.9014	0.4817	Inf	Inf
+1.9408	0.2474	Inf	Inf
+1.9847	0.0459	Inf	Inf
+Data End	
+

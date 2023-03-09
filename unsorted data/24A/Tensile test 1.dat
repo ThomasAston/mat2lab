@@ -1,0 +1,107 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 03.03.2023	Time: 13:37:08
+
+Name:	Tensile Test 24A  Red Rod
+User Comment:	Nikola Kolev ; Nefeli Pelekanou; Roberto Fregonara ; Taylor Cullen
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0177	0.1003	Inf	Inf
+0.0385	0.2006	Inf	Inf
+0.0535	0.3014	Inf	Inf
+0.0609	0.4163	Inf	Inf
+0.0739	0.5971	Inf	Inf
+0.0883	0.7528	Inf	Inf
+0.0968	0.8513	Inf	Inf
+0.1039	0.9486	Inf	Inf
+0.1186	1.2225	Inf	Inf
+0.1443	1.5579	Inf	Inf
+0.1643	1.9965	Inf	Inf
+0.1912	2.4603	Inf	Inf
+0.2083	2.9059	Inf	Inf
+0.2352	3.2655	Inf	Inf
+0.2610	3.5624	Inf	Inf
+0.2683	3.6804	Inf	Inf
+0.3077	3.7811	Inf	Inf
+0.3367	3.8811	Inf	Inf
+0.3717	3.9795	Inf	Inf
+0.4003	4.0805	Inf	Inf
+0.4416	4.1815	Inf	Inf
+0.4848	4.2808	Inf	Inf
+0.5196	4.3802	Inf	Inf
+0.5644	4.4802	Inf	Inf
+0.5892	4.5812	Inf	Inf
+0.6677	4.6804	Inf	Inf
+0.7173	4.7813	Inf	Inf
+0.7645	4.8821	Inf	Inf
+0.8220	4.9820	Inf	Inf
+0.8737	5.0823	Inf	Inf
+0.9503	5.1830	Inf	Inf
+1.0374	5.2827	Inf	Inf
+1.1212	5.3822	Inf	Inf
+1.2070	5.4838	Inf	Inf
+1.3074	5.5498	Inf	Inf
+1.4077	5.6189	Inf	Inf
+1.4990	5.7179	Inf	Inf
+1.5991	5.7318	Inf	Inf
+1.6999	5.7854	Inf	Inf
+1.7997	5.8533	Inf	Inf
+1.9001	5.8601	Inf	Inf
+2.0009	5.9005	Inf	Inf
+2.1002	5.9379	Inf	Inf
+2.1999	5.9458	Inf	Inf
+2.3004	5.9846	Inf	Inf
+2.3474	5.8841	Inf	Inf
+2.3576	5.9815	Inf	Inf
+2.3661	6.0830	Inf	Inf
+2.4650	6.0255	Inf	Inf
+2.5647	6.0344	Inf	Inf
+2.6643	6.0351	Inf	Inf
+2.7648	6.0726	Inf	Inf
+2.8641	6.0569	Inf	Inf
+2.9630	6.0451	Inf	Inf
+3.0642	6.0947	Inf	Inf
+3.1658	6.0712	Inf	Inf
+3.2662	6.0613	Inf	Inf
+3.3666	6.0984	Inf	Inf
+3.3900	6.1998	Inf	Inf
+3.4901	6.1219	Inf	Inf
+3.5851	6.0212	Inf	Inf
+3.5981	6.1217	Inf	Inf
+3.6462	6.0213	Inf	Inf
+3.6707	6.1204	Inf	Inf
+3.7711	6.1008	Inf	Inf
+3.8716	6.0912	Inf	Inf
+3.9701	6.0890	Inf	Inf
+4.0699	6.0873	Inf	Inf
+4.1695	6.0754	Inf	Inf
+4.2696	6.0536	Inf	Inf
+4.3686	6.0378	Inf	Inf
+4.4678	5.9994	Inf	Inf
+4.5681	5.9652	Inf	Inf
+4.6672	5.9206	Inf	Inf
+4.7615	5.8196	Inf	Inf
+4.8612	5.8156	Inf	Inf
+4.9604	5.7295	Inf	Inf
+5.0614	5.6573	Inf	Inf
+5.1602	5.5564	Inf	Inf
+5.2598	5.5343	Inf	Inf
+5.3601	5.4488	Inf	Inf
+5.4102	5.3480	Inf	Inf
+5.5089	5.2893	Inf	Inf
+5.6088	5.1935	Inf	Inf
+5.7079	5.0967	Inf	Inf
+5.7699	4.9933	Inf	Inf
+5.8424	4.8915	Inf	Inf
+5.9218	4.5249	Inf	Inf
+6.0581	4.2125	Inf	Inf
+6.1363	4.0553	Inf	Inf
+Data End	
+

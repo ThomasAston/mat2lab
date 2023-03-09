@@ -1,0 +1,10 @@
+Eva Ho,  Max Meyrick, Ewan Brogan, Lin Chen
+
+Tensile Testing
+Steel - Diameter=6mm, Gauge Length=43mm
+Aluminium - Diameter=6mm, Gauge Length=43mm
+PLA - Diameter=6mm, Gauge Length=43mm
+
+Compressive Testing
+Timber, parallel to the grain - Thickness=18mm
+Timber, normal to the grain - Thickness=17.5mm

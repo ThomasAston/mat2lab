@@ -1,0 +1,82 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 03.03.2023	Time: 14:49:48
+
+Name:	24B PLA polymer
+User Comment:	Mathias, Armando, Yifan, Dominic, Euan
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+-1.9434	-0.0206	-Inf	-Inf
+-1.9304	0.0791	-Inf	Inf
+-1.8411	-0.0124	-Inf	-Inf
+-1.8304	0.1383	-Inf	Inf
+-1.7396	-0.0135	-Inf	-Inf
+-1.7297	0.1435	-Inf	Inf
+-1.6381	-0.0116	-Inf	-Inf
+-1.6297	0.1476	-Inf	Inf
+-1.5358	-0.0120	-Inf	-Inf
+-1.5289	0.1566	-Inf	Inf
+-1.4335	-0.0195	-Inf	-Inf
+-1.4297	0.1705	-Inf	Inf
+-1.3312	-0.0229	-Inf	-Inf
+-1.3297	0.1705	-Inf	Inf
+-1.2297	0.1806	-Inf	Inf
+-1.2266	-0.0300	-Inf	-Inf
+-1.1305	0.1746	-Inf	Inf
+-1.1236	-0.0311	-Inf	-Inf
+-1.0297	0.1810	-Inf	Inf
+-1.0228	-0.0277	-Inf	-Inf
+-0.9305	0.1810	-Inf	Inf
+-0.9221	-0.0240	-Inf	-Inf
+-0.8305	0.1847	-Inf	Inf
+-0.8213	-0.0094	-Inf	-Inf
+-0.7305	0.1978	-Inf	Inf
+-0.7198	-0.0071	-Inf	-Inf
+-0.6305	0.1900	-Inf	Inf
+-0.6175	-0.0097	-Inf	-Inf
+-0.5305	0.1956	-Inf	Inf
+-0.5152	-0.0109	-Inf	-Inf
+-0.4297	0.1888	-Inf	Inf
+-0.4122	-0.0157	-Inf	-Inf
+-0.3298	0.1945	-Inf	Inf
+-0.3091	-0.0187	-Inf	-Inf
+-0.2290	0.1982	-Inf	Inf
+-0.2061	-0.0262	-Inf	-Inf
+-0.1290	0.1937	-Inf	Inf
+-0.1023	-0.0330	-Inf	-Inf
+-0.0290	0.2001	-Inf	Inf
+0.0710	0.2829	Inf	Inf
+0.1717	0.3582	Inf	Inf
+0.2717	0.4586	Inf	Inf
+0.3557	0.5579	Inf	Inf
+0.4557	0.6448	Inf	Inf
+0.4565	-0.0011	Inf	-Inf
+0.5557	0.7408	Inf	Inf
+0.5587	-0.0086	Inf	-Inf
+0.6389	0.8416	Inf	Inf
+0.6648	-0.0124	Inf	-Inf
+0.7389	0.9176	Inf	Inf
+0.7694	-0.0127	Inf	-Inf
+0.8389	0.9487	Inf	Inf
+0.8763	-0.0105	Inf	-Inf
+0.9389	0.9240	Inf	Inf
+0.9824	0.0041	Inf	Inf
+1.0389	0.9225	Inf	Inf
+1.0854	0.0210	Inf	Inf
+1.1389	0.9142	Inf	Inf
+1.1892	0.0360	Inf	Inf
+1.2404	0.8944	Inf	Inf
+1.2595	0.7632	Inf	Inf
+1.2946	0.0510	Inf	Inf
+1.3541	0.2971	Inf	Inf
+1.3846	0.1948	Inf	Inf
+1.3961	0.0933	Inf	Inf
+Data End	
+

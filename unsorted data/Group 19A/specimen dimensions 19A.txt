@@ -1,0 +1,30 @@
+Aluminium 
+Li = 4.4 cm 
+D = 6 mm 
+Lf = 5 cm 
+Df = 5.4 mm 
+
+Steel 
+Li = 4.18 cm 
+D = 6 mm 
+Lf = 5.1 cm 
+Df = 5 mm 
+
+PLA polymer 
+Li = 4.27 cm 
+D = 6 mm
+Lf = 4.4 cm 
+Df = 5.9 mm 
+
+Timber (parallel) 
+Li = 17 mm 
+Width = 17.4 mm 
+Lf = 26.4 mm 
+Width (final) = 7 mm 
+
+Timber (perpendicular) 
+Li = 17.4 mm 
+Width = 17 mm 
+Lf = 2 cm 
+Width (final) = 14 mm 
+

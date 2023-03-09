@@ -1,0 +1,35 @@
+Code:	WP 300.20
+Tensile test
+
+G.U.N.T. Gerätebau GmbH
+Hanskampring 15 -17,
+22885 Barsbüttel
+Germany, Tel ++4940 / 67 08 54 -0
+Date: 16.02.2023	Time: 15:35:01
+
+Name:	13B CHEMICAL
+User Comment:	
+
+Data Start
+s Distance	F Force	EPS Elongation	SIGMA Stress	
+mm	KN	%	N/mm^2	
+0.0756	0.1000	Inf	Inf
+0.1756	0.1311	Inf	Inf
+0.2756	0.1473	Inf	Inf
+0.3755	0.1735	Inf	Inf
+0.4755	0.1649	Inf	Inf
+0.5755	0.2166	Inf	Inf
+0.6755	0.3147	Inf	Inf
+0.7755	0.4103	Inf	Inf
+0.8450	0.5103	Inf	Inf
+0.9427	0.6104	Inf	Inf
+1.0427	0.7082	Inf	Inf
+1.1266	0.8078	Inf	Inf
+1.2266	0.8787	Inf	Inf
+1.3274	0.9315	Inf	Inf
+1.4282	0.8899	Inf	Inf
+1.5213	0.7659	Inf	Inf
+1.5442	0.6325	Inf	Inf
+1.6289	0.2218	Inf	Inf
+Data End	
+
