@@ -6,7 +6,7 @@
 #    By: taston <thomas.aston@ed.ac.uk>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 12:38:32 by taston            #+#    #+#              #
-#    Updated: 2023/03/09 15:14:10 by taston           ###   ########.fr        #
+#    Updated: 2023/03/10 09:36:06 by taston           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,13 @@ import os
 import fnmatch
 import pandas as pd
 import csv
+import numpy as np
 import matplotlib.pyplot as plt
 
 # Number of lines for each *.dat file header
 HEADER_LENGTH = 15
+# Specimen diameter in mm
+DIAMETER = 6
 
 def main():
     # Identify .dat files for chosen directory
@@ -32,24 +35,14 @@ def identify_files(dir):
     dat_files = []
     
     # setup files to be written to later on
-    header = ["dataset", "max_force"]
-    with open("sorted data/steel_max_force.csv", "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-    with open("sorted data/aluminium_max_force.csv", "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-    with open("sorted data/pla_max_force.csv", "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-    with open("sorted data/timberPar_max_force.csv", "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
-    with open("sorted data/timberPerp_max_force.csv", "w") as f:
-        writer = csv.writer(f)
-        writer.writerow(header)
+    header = ["dataset", "max_force", "ultimate_strength"]
+    for root, dirs, files in os.walk("sorted data"):
+        for name in files:
+            with open(f"sorted data/{name}", "w") as f:
+                writer = csv.writer(f)
+                writer.writerow(header)
     
-    
+    # initialise counts dictionary
     count = {"steel": 0,
              "aluminium": 0,
              "pla": 0,
@@ -58,7 +51,7 @@ def identify_files(dir):
              "unidentified": 0
             }
     
-    # loop over folders
+    # loop over folders looking for .dat files
     for root, dirs, files in os.walk(dir):
         for name in files:
             all_files.append(os.path.join(root, name))
@@ -81,10 +74,14 @@ def identify_files(dir):
                 else:
                     mat_flag = 'unidentified'
                 
+                # Update counts
                 count[mat_flag] += 1
 
                 # extract strength from dataset
                 get_strength(root, name, mat_flag, count)
+
+    # Print total number of files that could not be identified
+    print(f"Total uncategorised files: {count['unidentified']}")
 
 
 def get_strength(root, name, mat_flag, count):
@@ -104,63 +101,99 @@ def get_strength(root, name, mat_flag, count):
 
     # read into pandas dataframe
     dataframe = pd.read_csv("sorted data/current_data.csv")   
-    
-    # extract maximum force depending on material type
-    if mat_flag == "steel":
-        max_force = dataframe["force"].max() 
-        with open("sorted data/steel_max_force.csv", "a") as f:
-            writer = csv.writer(f)
-            if max_force != 0:
-                writer.writerow([count[mat_flag], max_force])
-    elif mat_flag == "aluminium":
-        max_force = dataframe["force"].max() 
-        with open("sorted data/aluminium_max_force.csv", "a") as f:
-            writer = csv.writer(f)
-            if max_force != 0:
-                writer.writerow([count[mat_flag], max_force])
-    elif mat_flag == "pla":
-        max_force = dataframe["force"].max() 
-        with open("sorted data/pla_max_force.csv", "a") as f:
-            writer = csv.writer(f)
-            if max_force != 0:
-                writer.writerow([count[mat_flag], max_force])
-    elif mat_flag == "timber parallel":
-        max_force = dataframe["force"].max() 
-        with open("sorted data/timberPar_max_force.csv", "a") as f:
-            writer = csv.writer(f)
-            if max_force != 0 and isinstance(max_force, float):
-                writer.writerow([count[mat_flag], max_force])
-    elif mat_flag == "timber perpendicular":
-        max_force = dataframe["force"].max() 
-        with open("sorted data/timberPerp_max_force.csv", "a") as f:
-            writer = csv.writer(f)
-            if max_force != 0 and isinstance(max_force, float):
-                writer.writerow([count[mat_flag], max_force])
-            
-    
-    # TODO: calculate ultimate strength from specimen area 
-    # specimen_area = 
-    # ultimate_strength = max_force/specimen_area
+    # calculate specimen cross section area
+    specimen_area = np.pi*(DIAMETER**2)/4
 
+    max_force = dataframe["force"].max() 
+    with open(f"sorted data/{mat_flag}.csv", "a") as f:
+        writer = csv.writer(f)
+        if max_force != 0:
+            # calculate ultimate strength in MPa
+            ultimate_strength = (max_force/specimen_area)*1000
+            # write data to csv
+            writer.writerow([count[mat_flag], max_force, ultimate_strength])
 
 def plot_data(dir):
-    steel_data = pd.read_csv('sorted data/steel_max_force.csv')["max_force"]
-    aluminium_data = pd.read_csv('sorted data/aluminium_max_force.csv')["max_force"]
-    pla_data = pd.read_csv('sorted data/pla_max_force.csv')["max_force"]
-    timberPar_data = pd.read_csv('sorted data/timberPar_max_force.csv')["max_force"]
-    timberPerp_data = pd.read_csv('sorted data/timberPerp_max_force.csv')["max_force"]
+    '''
+    Plot sorted data
+    '''
+
+    steel_data = pd.read_csv('sorted data/steel.csv')["ultimate_strength"]
+    aluminium_data = pd.read_csv('sorted data/aluminium.csv')["ultimate_strength"]
+    pla_data = pd.read_csv('sorted data/pla.csv')["ultimate_strength"]
     
-    plt.hist(steel_data, bins=10, label='Steel', alpha=0.5)
-    plt.hist(aluminium_data, bins=10, label='Aluminium', alpha=0.5)
-    plt.hist(pla_data, bins=10, label='PLA', alpha=0.5)
-    plt.xlabel("Maximum force (kN)")
+    bins = np.histogram(np.hstack((steel_data, aluminium_data, pla_data)), bins=150)[1]
+
+    # ----------- HISTOGRAMS (Frequency) -----------
+    # Steel figure
+    plt.figure(1)
+    plt.hist(steel_data, bins=10, label='Steel', alpha=0.5, color='c')
+    plt.title("Steel")
+    plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Frequency")
-    # plt.hist(timberPar_data, bins=10, label='Timber (parallel)', alpha=0.5)
-    # plt.hist(timberPerp_data, bins=10, label='Timber (perpendicular)', alpha=0.5)
-    
+    plt.savefig("plot images/histogramSteel.png")
+    # Aluminium figure
+    plt.figure(2)
+    plt.hist(aluminium_data, bins=10, label='Aluminium', alpha=0.5, color='gray')
+    plt.title("Aluminium")
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Frequency")
+    plt.savefig("plot images/histogramAluminium.png")
+    # PLA figure
+    plt.figure(3)
+    plt.hist(pla_data, bins=10, label='PLA', alpha=0.5, color='darkgreen')
+    plt.title("PLA")
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Frequency")
+    plt.savefig("plot images/histogramPLA.png")
+    # ALL figure
+    plt.figure(4)
+    plt.hist(steel_data, bins=bins, label='Steel', alpha=0.5, color='c')
+    plt.hist(aluminium_data, bins=bins, label='Aluminium', alpha=0.5, color='gray')
+    plt.hist(pla_data, bins=bins, label='PLA', alpha=0.5, color='darkgreen')
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Frequency")
     plt.legend(loc='upper center', ncol=3)
-    plt.tight_layout()
     plt.savefig("plot images/histogramAll.png")
+    
+    # ----------- HISTOGRAMS (Density) -----------
+    # Steel figure
+    plt.figure(5)
+    steel_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='c', label="Steel")
+    steel_data.plot(kind="kde", label="Steel KDE", color='c')
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Density")
+    plt.legend(loc='upper right')
+    plt.savefig("plot images/histogramSteelKDE.png")
+    # Aluminium figure
+    plt.figure(6)
+    aluminium_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='gray', label="Aluminium")
+    aluminium_data.plot(kind="kde", label="Aluminium KDE", color='gray')
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Density")
+    plt.legend(loc='upper right')
+    plt.savefig("plot images/histogramAluminiumKDE.png")
+    # PLA figure
+    plt.figure(7)
+    pla_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='darkgreen', label="PLA")
+    pla_data.plot(kind="kde", label="PLA KDE", color='darkgreen')
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Density")
+    plt.legend(loc='upper right')
+    plt.savefig("plot images/histogramPLAKDE.png")
+    # ALL figure 
+    plt.figure(8)
+    steel_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='c', label="Steel")
+    steel_data.plot(kind="kde", label="Steel KDE", color='c')
+    aluminium_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='gray', label="Aluminium")
+    aluminium_data.plot(kind="kde", label="Aluminium KDE", color='gray')
+    pla_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='darkgreen', label="PLA")
+    pla_data.plot(kind="kde", label="PLA KDE", color='darkgreen')
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Density")
+    plt.legend(loc='upper right')
+    plt.savefig("plot images/histogramAllKDE.png")
+    plt.tight_layout()
     plt.show()
 
     
