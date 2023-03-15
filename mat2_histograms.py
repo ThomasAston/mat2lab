@@ -6,7 +6,7 @@
 #    By: taston <thomas.aston@ed.ac.uk>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 12:38:32 by taston            #+#    #+#              #
-#    Updated: 2023/03/10 09:36:06 by taston           ###   ########.fr        #
+#    Updated: 2023/03/15 09:42:54 by taston           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,11 +55,10 @@ def identify_files(dir):
     for root, dirs, files in os.walk(dir):
         for name in files:
             all_files.append(os.path.join(root, name))
-            
             # if .dat file
             if fnmatch.fnmatch(name, '*.dat'):
                 dat_files.append(os.path.join(root, name))
-                
+                print(name)
                 # identify material
                 if fnmatch.fnmatch(name.lower(), '*steel*'):
                     mat_flag = 'steel'
@@ -68,6 +67,7 @@ def identify_files(dir):
                 elif fnmatch.fnmatch(name.lower(), '*pla*'):
                     mat_flag = 'pla'
                 elif fnmatch.fnmatch(name.lower(), '*par*'):
+                    # if not fnmatch.fnmatch(name.lower(), '*compress*'):
                     mat_flag = 'timber parallel'
                 elif fnmatch.fnmatch(name.lower(), '*perp*'):
                     mat_flag = 'timber perpendicular'
@@ -104,23 +104,33 @@ def get_strength(root, name, mat_flag, count):
     # calculate specimen cross section area
     specimen_area = np.pi*(DIAMETER**2)/4
 
-    max_force = dataframe["force"].max() 
     with open(f"sorted data/{mat_flag}.csv", "a") as f:
         writer = csv.writer(f)
-        if max_force != 0:
+        if "timber" not in mat_flag:
             # calculate ultimate strength in MPa
-            ultimate_strength = (max_force/specimen_area)*1000
-            # write data to csv
-            writer.writerow([count[mat_flag], max_force, ultimate_strength])
+            max_force = dataframe["force"].max() 
+            if max_force != 0:
+                ultimate_strength = (max_force/specimen_area)*1000
+                # write data to csv
+                writer.writerow([count[mat_flag], max_force, ultimate_strength])
+        elif mat_flag == 'timber parallel' and 'compres' not in name:
+            # remove rows where displacement is above threshold then find strength
+            threshold = 3 #mm
+            dataframe = dataframe[dataframe['distance'] < threshold]
+            max_force = dataframe["force"].max() 
+            if max_force > 3:
+                ultimate_strength = (max_force/specimen_area)*1000
+                # write data to csv
+                writer.writerow([count[mat_flag], max_force, ultimate_strength])
 
 def plot_data(dir):
     '''
     Plot sorted data
     '''
-
     steel_data = pd.read_csv('sorted data/steel.csv')["ultimate_strength"]
     aluminium_data = pd.read_csv('sorted data/aluminium.csv')["ultimate_strength"]
     pla_data = pd.read_csv('sorted data/pla.csv')["ultimate_strength"]
+    timber_data = pd.read_csv('sorted data/timber parallel.csv')["ultimate_strength"]
     
     bins = np.histogram(np.hstack((steel_data, aluminium_data, pla_data)), bins=150)[1]
 
@@ -151,6 +161,7 @@ def plot_data(dir):
     plt.hist(steel_data, bins=bins, label='Steel', alpha=0.5, color='c')
     plt.hist(aluminium_data, bins=bins, label='Aluminium', alpha=0.5, color='gray')
     plt.hist(pla_data, bins=bins, label='PLA', alpha=0.5, color='darkgreen')
+    plt.hist(timber_data, bins = bins, label='Timber',alpha=0.5, color='brown')
     plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Frequency")
     plt.legend(loc='upper center', ncol=3)
@@ -189,12 +200,14 @@ def plot_data(dir):
     aluminium_data.plot(kind="kde", label="Aluminium KDE", color='gray')
     pla_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='darkgreen', label="PLA")
     pla_data.plot(kind="kde", label="PLA KDE", color='darkgreen')
+    timber_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='brown', label="Timber")
+    timber_data.plot(kind="kde", label="Timber KDE", color='brown')
     plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Density")
     plt.legend(loc='upper right')
     plt.savefig("plot images/histogramAllKDE.png")
     plt.tight_layout()
-    plt.show()
+    # plt.show()
 
     
 if __name__ == "__main__":
