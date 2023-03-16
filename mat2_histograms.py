@@ -6,7 +6,7 @@
 #    By: taston <thomas.aston@ed.ac.uk>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 12:38:32 by taston            #+#    #+#              #
-#    Updated: 2023/03/15 09:42:54 by taston           ###   ########.fr        #
+#    Updated: 2023/03/16 08:37:52 by taston           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ import pandas as pd
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+import shutil
 
 # Number of lines for each *.dat file header
 HEADER_LENGTH = 15
@@ -26,6 +27,8 @@ def main():
     # Identify .dat files for chosen directory
     identify_files("unsorted data")
     plot_data("sorted data")
+
+    shutil.make_archive('plot images', 'zip', 'plot images')
 
 def identify_files(dir):
     '''
@@ -42,7 +45,7 @@ def identify_files(dir):
                 writer = csv.writer(f)
                 writer.writerow(header)
     
-    # initialise counts dictionary
+    # initialise counts dict
     count = {"steel": 0,
              "aluminium": 0,
              "pla": 0,
@@ -58,7 +61,6 @@ def identify_files(dir):
             # if .dat file
             if fnmatch.fnmatch(name, '*.dat'):
                 dat_files.append(os.path.join(root, name))
-                print(name)
                 # identify material
                 if fnmatch.fnmatch(name.lower(), '*steel*'):
                     mat_flag = 'steel'
@@ -115,7 +117,7 @@ def get_strength(root, name, mat_flag, count):
                 writer.writerow([count[mat_flag], max_force, ultimate_strength])
         elif mat_flag == 'timber parallel' and 'compres' not in name:
             # remove rows where displacement is above threshold then find strength
-            threshold = 3 #mm
+            threshold = 4 #mm
             dataframe = dataframe[dataframe['distance'] < threshold]
             max_force = dataframe["force"].max() 
             if max_force > 3:
@@ -136,28 +138,35 @@ def plot_data(dir):
 
     # ----------- HISTOGRAMS (Frequency) -----------
     # Steel figure
-    plt.figure(1)
+    plt.figure('Steel frequency')
     plt.hist(steel_data, bins=10, label='Steel', alpha=0.5, color='c')
     plt.title("Steel")
     plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Frequency")
     plt.savefig("plot images/histogramSteel.png")
     # Aluminium figure
-    plt.figure(2)
+    plt.figure('Aluminium frequency')
     plt.hist(aluminium_data, bins=10, label='Aluminium', alpha=0.5, color='gray')
     plt.title("Aluminium")
     plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Frequency")
     plt.savefig("plot images/histogramAluminium.png")
     # PLA figure
-    plt.figure(3)
+    plt.figure('PLA frequency')
     plt.hist(pla_data, bins=10, label='PLA', alpha=0.5, color='darkgreen')
     plt.title("PLA")
     plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Frequency")
     plt.savefig("plot images/histogramPLA.png")
+    # Timber figure
+    plt.figure('Timber frequency')
+    plt.hist(timber_data, bins=10, label='Timber', alpha=0.5, color='brown')
+    plt.title("Timber")
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Frequency")
+    plt.savefig("plot images/histogramTimber.png")
     # ALL figure
-    plt.figure(4)
+    plt.figure('ALL frequency')
     plt.hist(steel_data, bins=bins, label='Steel', alpha=0.5, color='c')
     plt.hist(aluminium_data, bins=bins, label='Aluminium', alpha=0.5, color='gray')
     plt.hist(pla_data, bins=bins, label='PLA', alpha=0.5, color='darkgreen')
@@ -169,7 +178,7 @@ def plot_data(dir):
     
     # ----------- HISTOGRAMS (Density) -----------
     # Steel figure
-    plt.figure(5)
+    plt.figure('Steel KDE')
     steel_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='c', label="Steel")
     steel_data.plot(kind="kde", label="Steel KDE", color='c')
     plt.xlabel("Ultimate strength (MPa)")
@@ -177,7 +186,7 @@ def plot_data(dir):
     plt.legend(loc='upper right')
     plt.savefig("plot images/histogramSteelKDE.png")
     # Aluminium figure
-    plt.figure(6)
+    plt.figure('Aluminium KDE')
     aluminium_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='gray', label="Aluminium")
     aluminium_data.plot(kind="kde", label="Aluminium KDE", color='gray')
     plt.xlabel("Ultimate strength (MPa)")
@@ -185,15 +194,22 @@ def plot_data(dir):
     plt.legend(loc='upper right')
     plt.savefig("plot images/histogramAluminiumKDE.png")
     # PLA figure
-    plt.figure(7)
+    plt.figure('PLA KDE')
     pla_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='darkgreen', label="PLA")
     pla_data.plot(kind="kde", label="PLA KDE", color='darkgreen')
     plt.xlabel("Ultimate strength (MPa)")
     plt.ylabel("Density")
     plt.legend(loc='upper right')
     plt.savefig("plot images/histogramPLAKDE.png")
+    # Timber figure
+    plt.figure('Timber KDE')
+    timber_data.plot(kind="hist", density=True, bins=10, alpha=0.5, color='brown', label="Timber")
+    timber_data.plot(kind="kde", label="Timber KDE", color='brown')
+    plt.xlabel("Ultimate strength (MPa)")
+    plt.ylabel("Frequency")
+    plt.savefig("plot images/histogramTimberKDE.png")
     # ALL figure 
-    plt.figure(8)
+    plt.figure('ALL KDE')
     steel_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='c', label="Steel")
     steel_data.plot(kind="kde", label="Steel KDE", color='c')
     aluminium_data.plot(kind="hist", density=True, bins=bins, alpha=0.5, color='gray', label="Aluminium")
@@ -207,7 +223,7 @@ def plot_data(dir):
     plt.legend(loc='upper right')
     plt.savefig("plot images/histogramAllKDE.png")
     plt.tight_layout()
-    # plt.show()
+    plt.show()
 
     
 if __name__ == "__main__":
